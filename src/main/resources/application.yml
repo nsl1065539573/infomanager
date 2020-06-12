@@ -1,0 +1,29 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /infoControl/
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/changeInfoManager?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: nan1065539573
+  thymeleaf:
+      suffix: .html
+      mode: HTML5
+      encoding: UTF-8
+      servlet:
+        content-type: text/html
+  mvc:
+      static-path-pattern: /**
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

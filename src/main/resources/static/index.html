@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-3.4.1.min.js" charset="UTF-8"></script>
+    <link href="css/index.css" charset="UTF-8" rel="stylesheet"  />
+    <script src="js/index.js" charset="UTF-8"></script>
+
+</head>
+<body>
+<div id="head_tittle" class="be_center">
+    <h2>文件修改记录管理系统</h2>
+</div>
+<div id="query" class="be_center">
+    <input id="fileName" placeholder="文件名" class="input_style addInput" />
+    <input id="description" placeholder="修改原因" class="input_style addInput" />
+    <input id="details" placeholder="改动详情" class="input_style addInput" />
+    <select id="opt_type" class="input_style">
+        <option value="a0">改动类型</option>
+        <option value="0">0-新增</option>
+        <option value="1">1-修改</option>
+    </select>
+    <button id="add">新增</button>
+</div>
+<div id="info_body" class="be_center">
+
+    <table id="info_table">
+        <tr>
+            <th>ID</th>
+            <th>文件名</th>
+            <th>修改原因</th>
+            <th>修改内容</th>
+            <th>操作类型</th>
+            <th>创建时间</th>
+            <th>更新时间</th>
+            <th>操作</th>
+        </tr>-
+    </table>
+
+</div>
+<!--子窗口-->
+<div id="addBox" class="addBox">
+    <a id="demo" href="javascript:;" onclick="jQuery('.addBox').hide();jQuery('#shadow').hide();" class="close">×&nbsp;&nbsp;</a>
+    <br />
+    <span id="desc">更 新</span>
+    <div class="line"></div>
+    <input id="upFileName" class="topMargin upInput" placeholder="文件名" /><br />
+    <input id="upDescription" class="topMargin upInput" placeholder="原因" /><br />
+    <input id="upDetails" class="topMargin upInput" placeholder="描述" /><br />
+    <!--<input id="upOpt_type" class="topMargin upInput" placeholder="操作类型" /><br />-->
+    <select id="upOpt_type" class="topMargin upInput">
+        <option value="a0">改动类型</option>
+        <option value="0">0-新增</option>
+        <option value="1">1-修改</option>
+    </select><br>
+    <button class="topMargin" id="update">更新</button>
+</div>
+<!--遮罩层-->
+<div id="shadow"></div>
+</body>
+</html>
